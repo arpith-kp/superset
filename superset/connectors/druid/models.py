@@ -166,7 +166,7 @@ class DruidCluster(Model, AuditMixinNullable, ImportExportMixin):
         if not re.match("http(s)?://", host):
             host = "http://" + host
 
-        url = "{0}:{1}".format(host, port) if port else host
+        url = "{0}".format(host)
         return url
 
     def get_base_broker_url(self) -> str:
